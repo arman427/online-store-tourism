@@ -1,16 +1,12 @@
-<<<<<<< HEAD
-=======
-import { SwiperWrapper } from "@/components/Swiper";
->>>>>>> a4b925b (commit)
+import { Hero, Popular, Services, SwiperWrapper } from "@/components";
 
 export default function HomePage() {
    return (
       <div>
-<<<<<<< HEAD
-
-=======
          <SwiperWrapper />
->>>>>>> a4b925b (commit)
+         <Hero />
+         <Services />
+         <Popular />
       </div>
    )
 }

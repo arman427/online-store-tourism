@@ -1,7 +1,6 @@
 export { Container } from './container';
-<<<<<<< HEAD
 export { Header } from './Header';
-=======
-export { Header } from './Header';
-export { Swiper } from './Swiper';
->>>>>>> a4b925b (commit)
+export { SwiperWrapper } from './Swiper';
+export { Hero } from './Hero';
+export { Services } from './Services';
+export { Popular } from './Popular';
