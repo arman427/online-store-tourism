@@ -3,7 +3,7 @@ import Image from "next/image";
 export function Popular() {
    return (
       <section>
-         <div className="grid-wrapper grid grid-cols-[1fr_800px_800px_1fr] items-center">
+         <div className="grid-wrapper grid grid-cols-[1fr_700px_700px_1fr] items-center">
             <div className="col-start-2 col-end-3 p-10">
                <h2 className="text-3xl mb-4">Париж: вход только для влюбленных</h2>
                <p className="mb-2 text-foreground font-semibold text-[15px]">Путешествие с Flyaway — это лучший способ стать ближе к своей собственной планете. Мы уверены, что с нами у вас это получится лучше всего. Уже более десяти лет мы сближаем людей по всему миру.</p>
