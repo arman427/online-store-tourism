@@ -12,6 +12,13 @@
    --color-foreground: var(--foreground);
    --color-accent: var(--accent);
    --color-link-hover: var(--link-hover);
+<<<<<<< HEAD
+=======
+}
+
+button {
+   @apply cursor-pointer;
+>>>>>>> a4b925b (commit)
 }
 
 body {
