@@ -4,7 +4,7 @@ import { SERVICES } from "@/constants/services.data";
 export function Services() {
    return (
       <section className="bg-muted text-center pt-20 pb-40">
-         <h2 className="text-2xl font-semibold uppercase mb-15">Услуги</h2>
+         <h2 className="text-3xl font-semibold uppercase mb-15">Услуги</h2>
          <Container className="grid grid-cols-3 gap-8">
             {SERVICES.map(({ icon: Icon, ...service }) => (
                <div key={service.id} className="bg-background max-w-100 h-100 p-5 shadow-xl shadow-black/10 flex flex-col items-center border-2 border-transparent duration-300 ease hover:border-b-accent">

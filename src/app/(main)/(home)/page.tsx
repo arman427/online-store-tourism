@@ -1,4 +1,4 @@
-import { Hero, Popular, Services, SwiperWrapper, Testimonials } from "@/components";
+import { Footer, Hero, Popular, Services, SwiperWrapper, Testimonials } from "@/components";
 
 export default function HomePage() {
    return (
@@ -8,6 +8,7 @@ export default function HomePage() {
          <Services />
          <Popular />
          <Testimonials />
+         <Footer />
       </div>
    )
 }

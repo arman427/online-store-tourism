@@ -9,12 +9,21 @@ export function Header() {
          <div className="border-b border-gray-200">
             <Container className="flex items-center justify-between py-2">
                <div className="flex gap-8 items-center">
-                  {CONTACTS_DATA.map(({ icon: Icon, text: text, id }) => (
-                     <a href="#" key={id} className="flex gap-2 text-[#999999] items-stretch text-[13px] hover:text-foreground transition-colors py-2">
-                        <Icon size={15} className="shrink-0" />
-                        <span>{text}</span>
-                     </a>
-                  ))}
+                  {CONTACTS_DATA.map(({ icon: Icon, text: text, id, href }) => {
+                     const isLink = Boolean(href);
+                     const Tag = isLink ? 'a' : 'div';
+
+                     return (
+                        <Tag
+                           key={id}
+                           {...isLink ? { href } : {}}
+                           className="flex gap-2 text-[#999999] items-stretch text-[13px] hover:text-foreground transition-colors py-2">
+                           <Icon size={15} className="shrink-0" />
+                           <span>{text}</span>
+                        </Tag>
+                     )
+                  }
+                  )}
                </div>
 
                <div className="flex gap-6 items-center">
