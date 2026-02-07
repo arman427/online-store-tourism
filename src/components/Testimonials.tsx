@@ -4,8 +4,8 @@ import Image from "next/image";
 import { Line } from "./ui/Line";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
-import { TESTIMONIALS } from "@/constants/testimonials.data";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { TESTIMONIALS } from "@/constants";
 
 export function Testimonials() {
    return (

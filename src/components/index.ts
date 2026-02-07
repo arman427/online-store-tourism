@@ -6,3 +6,4 @@ export { Services } from './Services';
 export { Popular } from './Popular';
 export { Testimonials } from './Testimonials';
 export { Footer } from './Footer';
+export { AboutWelcome } from './AboutWelcome';

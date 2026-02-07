@@ -1,4 +1,5 @@
-import { Header } from "@/components";
+import { Footer, Header } from "@/components";
+import { BackToTop } from "@/components/ui/BackToTop";
 import { ReactNode } from "react";
 
 
@@ -8,6 +9,8 @@ export default function HomeLayout({ children }: { children: ReactNode }) {
       <main>
          <Header />
          {children}
+         <Footer />
+         <BackToTop />
       </main>
    )
 }  

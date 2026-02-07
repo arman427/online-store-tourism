@@ -2,13 +2,11 @@ export const SOCIALS = [
    {
       name: "Telegram",
       imageUrl: "/telegram.svg",
+      href: "https://t.me/armanhik7",
    },
    {
-      name: "WhatsApp",
-      imageUrl: "/whatsapp.svg",
-   },
-   {
-      name: "TikTok",
-      imageUrl: "/tiktok.svg",
+      name: "GitHub",
+      imageUrl: "/github.svg",
+      href: "https://github.com/arman427"
    },
 ]

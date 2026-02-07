@@ -1,0 +1,7 @@
+export * from './footer-links';
+export * from './footer-payment-data';
+export * from './footer-socials-data';
+export * from './header-links';
+export * from './services.data';
+export * from './slides-data';
+export * from './testimonials.data';

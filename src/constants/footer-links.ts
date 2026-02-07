@@ -10,15 +10,15 @@ export const FOOTER_LINKS = [
    {
       title: "О компании",
       links: [
-         { label: "О нас", href: "" },
          { label: "Отзывы клиентов", href: "" },
+         { label: "О нас", href: "" },
       ],
    },
    {
       title: "Путешествия",
       links: [
-         { label: "Горящие туры", href: "" },
          { label: "Популярные туры", href: "" },
+         { label: "Горящие туры", href: "" },
       ],
    },
    {
