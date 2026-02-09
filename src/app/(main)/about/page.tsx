@@ -1,7 +1,5 @@
 'use client'
-
-import { AboutWelcome } from "@/components"
-import { AboutGrid } from "@/components/AboutGrid"
+import { AboutWelcome, AboutGrid } from "@/components"
 
 export default function AboutPage() {
    return (

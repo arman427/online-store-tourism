@@ -1,3 +1,5 @@
+'use client'
+
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
@@ -40,7 +42,7 @@ export function AboutGrid() {
 
    return (
       <>
-         <h1 className="scroll-mt-[140px] uppercase font-bold text-8xl italic aboutGrid-title text-center mt-100 mb-10" id="gridSection">Почему мы?</h1>
+         <h1 className="scroll-mt-35 uppercase font-bold text-8xl italic aboutGrid-title text-center mt-100 mb-10" id="gridSection">Почему мы?</h1>
          <section className="grid grid-cols-1 lg:grid-cols-[1fr_min(1000px,45%)_1fr] gap-2 overflow-hidden w-full px-3 mb-50">
             <div className="col-start-1 col-end-2 w-full h-100 flex flex-col items-center justify-center text-center bg-link-hover p-10 font-semibold border border-black/5">
                <h3 className="text-4xl font-bold italic uppercase">Индивидуальный подход</h3>
