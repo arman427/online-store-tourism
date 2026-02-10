@@ -21,12 +21,13 @@ model Users {
 }
 
 model Tours {
-   id       Int      @id @default(autoincrement())
-   title    String
-   imageUrl String
-   date     DateTime
-   price    Int
-
+   id         Int         @id @default(autoincrement())
+   title      String
+   imageUrl   String
+   date       DateTime
+   oldPrice   Int
+   price      Int
+   rating     Float
    createdAt  DateTime    @default(now())
    updatedAt  DateTime    @updatedAt
    baskets    Basket[]
