@@ -8,7 +8,7 @@ export default async function CatalogPage() {
    return (
       <>
          <CatalogBody
-            tours={toursData}
+            items={toursData}
          />
       </>
    )

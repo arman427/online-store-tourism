@@ -1,4 +1,5 @@
 import { sqliteTable, integer, text, real } from 'drizzle-orm/sqlite-core';
+import { InferSelectModel } from "drizzle-orm";
 
 export const tours = sqliteTable('tours', {
    id: integer('id').primaryKey({ autoIncrement: true }),
@@ -11,3 +12,5 @@ export const tours = sqliteTable('tours', {
    createdAt: integer('created_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
    updatedAt: integer('updated_at', { mode: 'timestamp' }).$defaultFn(() => new Date()),
 });
+
+export type Tours = InferSelectModel<typeof tours>;
