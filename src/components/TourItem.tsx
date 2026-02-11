@@ -1,21 +1,21 @@
 import { PAGES } from "@/config/pages-config";
-import { Tours } from "@/generated/prisma/client";
 import { MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 import { format } from 'date-fns';
 import { ru } from 'date-fns/locale';
+import { Tours } from "@/lib/schema";
 
 
-export function TourItem({ item }: { item: Tours }) {
+export function TourItem({ item }: { item: any }) {
    const formattedDate = format(new Date(item.date), 'dd MMMM yyyy', { locale: ru });
    return (
       <div className="w-65 transition-all will-change-transform backface-hidden shadow-xl shadow-black/5">
          <Link href={PAGES.PRODUCTS(item.id)}>
             <div className="w-full relative h-50">
                <Image
-                  src={item.imageUrl}
+                  src={item.}
                   alt={item.title}
                   fill
                   sizes="500px"

@@ -1,9 +1,9 @@
-import { Tours } from "@/lib/schema";
+// import { Tours } from "@/lib/schema";
 import { CatalogFilters } from "./CatalogFilters";
 import { Container } from "./container";
 import { TourItem } from "./TourItem";
 
-export async function CatalogBody({ items }: { items: Tours[] }) {
+export async function CatalogBody({ items }: { items: any }) {
 
    return (
       <Container className="my-20">
@@ -15,7 +15,7 @@ export async function CatalogBody({ items }: { items: Tours[] }) {
 
             {/* Список туров */}
             <div className="grid grid-cols-3 gap-5">
-               {items.map((tour) => (
+               {items.map((tour: any) => (
                   <TourItem
                      key={tour.id}
                      item={tour}
