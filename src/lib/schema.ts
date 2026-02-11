@@ -1,5 +1,5 @@
 import { sqliteTable, integer, text, real } from 'drizzle-orm/sqlite-core';
-import { InferSelectModel } from "drizzle-orm";
+import { type InferSelectModel } from "drizzle-orm";
 
 export const tours = sqliteTable('tours', {
    id: integer('id').primaryKey({ autoIncrement: true }),

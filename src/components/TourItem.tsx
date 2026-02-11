@@ -8,14 +8,14 @@ import { ru } from 'date-fns/locale';
 import { Tours } from "@/lib/schema";
 
 
-export function TourItem({ item }: { item: any }) {
-   const formattedDate = format(new Date(item.date), 'dd MMMM yyyy', { locale: ru });
+export function TourItem({ item }: { item: Tours }) {
+   const formattedDate = item.date ? format(new Date(item.date), 'dd MMMM yyyy', { locale: ru }) : 'Дата не указана'
    return (
       <div className="w-65 transition-all will-change-transform backface-hidden shadow-xl shadow-black/5">
          <Link href={PAGES.PRODUCTS(item.id)}>
             <div className="w-full relative h-50">
                <Image
-                  src={item.}
+                  src={item.imageUrl!}
                   alt={item.title}
                   fill
                   sizes="500px"
