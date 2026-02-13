@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./ui/tooltip";
 import { FOOTER_LINKS, FOOTER_PAYMENT, SOCIALS } from "@/constants";
+import { cn } from "@/lib/utils";
 
 export function Footer() {
    return (
@@ -81,6 +82,9 @@ export function Footer() {
                            alt={icon.name}
                            width={50}
                            height={20}
+                           className={cn('', {
+                              'brightness-0': icon.name == 'Apple Pay'
+                           })}
                         />
                      ))}
                   </div>

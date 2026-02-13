@@ -1,25 +1,25 @@
 import { PAGES } from "@/config/pages-config";
-import { Tours } from "@/generated/prisma/client";
 import { MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 import { format } from 'date-fns';
 import { ru } from 'date-fns/locale';
+import { Tours } from "@/lib/schema";
 
 
 export function TourItem({ item }: { item: Tours }) {
-   const formattedDate = format(new Date(item.date), 'dd MMMM yyyy', { locale: ru });
+   const formattedDate = item.date ? format(new Date(item.date), 'dd MMMM yyyy', { locale: ru }) : 'Дата не указана'
    return (
-      <div className="w-65 transition-all will-change-transform backface-hidden shadow-xl shadow-black/5">
+      <div className="rounded-3xl border border-black/10 w-65 transition-all will-change-transform backface-hidden shadow-xl shadow-black/5">
          <Link href={PAGES.PRODUCTS(item.id)}>
             <div className="w-full relative h-50">
                <Image
-                  src={item.imageUrl}
+                  src={item.imageUrl!}
                   alt={item.title}
                   fill
                   sizes="500px"
-                  className="object-cover"
+                  className="object-cover rounded-t-3xl"
                   quality={70}
                />
             </div>
@@ -30,7 +30,7 @@ export function TourItem({ item }: { item: Tours }) {
                   <span className="py-0.5 px-1 bg-green-100 rounded-lg text-[12px] text-emerald-700">{item.rating}</span>
                </div>
 
-               <div className="text-[12px] font-semibold">
+               <div className="text-[12px] font-semibold mb-2">
                   <span>{formattedDate}</span>
                </div>
 

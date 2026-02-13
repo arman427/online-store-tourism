@@ -1,9 +1,9 @@
+// import { Tours } from "@/lib/schema";
 import { CatalogFilters } from "./CatalogFilters";
 import { Container } from "./container";
 import { TourItem } from "./TourItem";
-import { Tours } from "@/generated/prisma/client";
 
-export async function CatalogBody({ tours }: { tours: Tours[] }) {
+export async function CatalogBody({ items }: { items: any }) {
 
    return (
       <Container className="my-20">
@@ -15,7 +15,7 @@ export async function CatalogBody({ tours }: { tours: Tours[] }) {
 
             {/* Список туров */}
             <div className="grid grid-cols-3 gap-5">
-               {tours.map((tour) => (
+               {items.map((tour: any) => (
                   <TourItem
                      key={tour.id}
                      item={tour}

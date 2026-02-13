@@ -1,13 +1,14 @@
 import { CatalogBody } from "@/components";
-import { prisma } from "@/lib/prisma";
+import { db } from "@/lib/db";
+import { tours } from "@/lib/schema";
 
 export default async function CatalogPage() {
-   const tours = await prisma.tours.findMany();
+   const toursData = await db.select().from(tours);
 
    return (
       <>
          <CatalogBody
-            tours={tours}
+            items={toursData}
          />
       </>
    )

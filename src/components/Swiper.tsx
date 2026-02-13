@@ -1,6 +1,6 @@
 'use client'
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation, Pagination, Autoplay, EffectCoverflow, Keyboard } from "swiper/modules"
+import { Navigation, Pagination, Autoplay, Keyboard } from "swiper/modules"
 
 import "swiper/css"
 import "swiper/css/navigation"
@@ -9,42 +9,9 @@ import "swiper/css/effect-coverflow"
 
 import Image from "next/image"
 import { SLIDES } from "@/constants/slides-data"
-import { ChevronLeft, ChevronRight, Split } from "lucide-react"
-import { useGSAP } from "@gsap/react"
-import gsap from "gsap"
-import { SplitText } from "gsap/SplitText"
-
-gsap.registerPlugin(SplitText)
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
 export function SwiperWrapper() {
-   useGSAP(() => {
-      let titleSplit = new SplitText('.swiper-title', { type: 'words,chars' })
-      let textSplit = new SplitText('.swiper-text', { type: "words,chars" })
-
-      gsap.from(titleSplit.chars, {
-         opacity: 0,
-         scaleX: -1,
-         rotation: -45,
-         transformOrigin: "center",
-         yPercent: -200,
-         duration: 1,
-         ease: "back",
-         stagger: 0.1
-      })
-
-      gsap.from(textSplit.chars, {
-         opacity: 0,
-         scaleX: -1,
-         rotation: -45,
-         transformOrigin: "center",
-         yPercent: -100,
-         duration: 1,
-         ease: "back",
-         stagger: 0.03
-      })
-   }, [])
-
-
    return (
       <Swiper
          simulateTouch={false}
@@ -54,10 +21,9 @@ export function SwiperWrapper() {
             prevEl: ".button-prev-swiper",
          }}
          pagination={true}
-         modules={[Navigation, Pagination, Autoplay, EffectCoverflow, Keyboard]}
+         modules={[Navigation, Pagination, Autoplay, Keyboard]}
          slidesPerView={1}
          keyboard={true}
-         effect="coverflow"
          loop={true}
          speed={800}
          autoplay={{
@@ -75,7 +41,7 @@ export function SwiperWrapper() {
                      className="slider-img"
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-white/20"></div>
-                  <div className="absolute left-80 top-50 bg-white/30 max-w-2xl h-fit flex flex-col gap-10 text-left backdrop-blur-sm shadow-md shadow-black/20 p-6">
+                  <div className="absolute left-80 top-50 bg-white/30 max-w-2xl h-fit flex flex-col gap-10 text-left backdrop-blur-sm shadow-md shadow-black/20 p-6 rounded-3xl">
                      <div className="relative z-99">
                         <h3 className="uppercase text-4xl font-bold mb-3 swiper-title italic tracking-[1px]">{slide.title}</h3>
                         <p className="max-w-150 swiper-text">{slide.desc}</p>
