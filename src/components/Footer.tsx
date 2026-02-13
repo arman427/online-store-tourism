@@ -75,12 +75,12 @@ export function Footer() {
 
                   <div className="flex gap-5">
                      {FOOTER_PAYMENT.map((icon) => (
-                        <Image
+                        <img
                            key={icon.url}
                            src={icon.url}
                            alt={icon.name}
-                           width={55}
-                           height={55}
+                           width={50}
+                           height={20}
                         />
                      ))}
                   </div>
@@ -88,7 +88,7 @@ export function Footer() {
 
                <div className="flex items-center justify-between text-white/50 text-[14px]">
                   <p>@ 2026 Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                  <p>Интернет-магазин создан на <span className="text-white">Next.js</span></p>
+                  <p>Интернет-магазин разработан на <span className="text-white">Next.js</span></p>
                </div>
             </div>
          </Container>

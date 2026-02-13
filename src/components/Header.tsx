@@ -1,7 +1,8 @@
 'use client';
-import { CONTACTS_DATA } from "@/constants";
+import { CONTACTS_DATA, HEADER_LINKS } from "@/constants";
 import { Container } from "./container";
 import Link from "next/link";
+import { Breadcrumbs } from "./Breadcrumbs";
 
 export function Header() {
    return (
@@ -40,33 +41,33 @@ export function Header() {
                </div>
             </Container>
          </div>
-         <div>
+         <div className="py-1">
             <Container className="flex items-center justify-between">
                <Link href="/" className="italic text-3xl font-bold uppercase transition-transform hover:-rotate-3 py-2">
                   Terra Travel
                </Link>
 
                <nav className="flex items-center">
-                  <Link href="/" className={`text-[15px] py-5 px-4 transition-colors hover:bg-link-hover hover:text-accent`}>
-                     Главная
-                  </Link>
-                  <Link href="/about" className="text-[15px] py-5 px-4 transition-colors hover:bg-link-hover hover:text-accent">
-                     О нас
-                  </Link>
-                  <Link href="/catalog" className="text-[15px] py-5 px-4 transition-colors hover:bg-link-hover hover:text-accent">
-                     Каталог
-                  </Link>
-                  <Link href="/catalog" className="text-[15px] py-5 px-4 transition-colors hover:bg-link-hover hover:text-accent">
-                     Где нас найти?
-                  </Link>
+                  {
+                     HEADER_LINKS.map((link) => (
+                        <Link key={link.text} href={link.href} className={`rounded-full text-[15px] py-3 px-4 transition-colors hover:bg-link-hover hover:text-accent`}>
+                           {link.text}
+                        </Link>
+                     ))
+                  }
+
                </nav>
 
-               <button className="text-[15px] bg-link-hover py-5 px-10 hover:bg-foreground hover:text-background">
+               <button className="text-[15px] bg-link-hover py-3 px-8 hover:bg-foreground hover:text-background">
                   Войти
                </button>
 
             </Container>
          </div>
+
+         <Container className="py-2">
+            <Breadcrumbs />
+         </Container>
       </header>
    )
 }

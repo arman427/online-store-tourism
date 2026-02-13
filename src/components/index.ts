@@ -7,3 +7,7 @@ export { Popular } from './Popular';
 export { Testimonials } from './Testimonials';
 export { Footer } from './Footer';
 export { AboutWelcome } from './AboutWelcome';
+export { AboutGrid } from './AboutGrid';
+export { Breadcrumbs } from './Breadcrumbs';
+export { CatalogBody } from './CatalogBody';
+export { CatalogFilters } from './CatalogFilters';

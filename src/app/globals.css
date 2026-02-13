@@ -21,7 +21,7 @@
 
    button {
       @apply cursor-pointer;
-      @apply transition-all duration-300 ease-in-out;
+      @apply transition-all duration-200 ease-in-out;
    }
 
    header {

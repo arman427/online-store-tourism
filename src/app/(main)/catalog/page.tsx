@@ -1,5 +1,14 @@
-export default function CatalogPage() {
+import { CatalogBody } from "@/components";
+import { prisma } from "@/lib/prisma";
+
+export default async function CatalogPage() {
+   const tours = await prisma.tours.findMany();
+
    return (
-      <h1>Catalog</h1>
+      <>
+         <CatalogBody
+            tours={tours}
+         />
+      </>
    )
 }
